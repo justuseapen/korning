@@ -1,0 +1,6 @@
+<h1>Employees</h1>
+<p>
+	<% @employees.each do |e| %>
+		<%= mail_to(e.email,e.name) %>
+	<% end %>
+</p>

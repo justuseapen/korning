@@ -1,0 +1,9 @@
+<h1>Customers</h1>
+<p>
+	<% @customers.each do |c| %>
+		<br>
+		<%= link_to c.website,c.company %>
+		<br>
+		Account Number: <%= c.acct_no %>
+	<% end %>
+</p>

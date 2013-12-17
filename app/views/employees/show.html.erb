@@ -1,0 +1,12 @@
+<h1><%= @employee.name %> </h1>
+<h2><%= @employee.email %></h2>
+<p>
+<% @employee.sales.each do |s| %>
+Date: <%= s.sale_date %>
+Amount: <%= s.sale_amount %>
+Units Sold: <%= s.units_sold %>
+Invoice #:<%= s.invoice_no %>
+Invoice Frequency: <%= s.invoice_frequency %>
+Product: <%= Product.find(s.product_id) %>
+<% end %>
+</p>
